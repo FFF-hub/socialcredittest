@@ -229,7 +229,7 @@ while GAME_RUNNING:
 		if game.state < 7:
 			if event.type == pygame.MOUSEBUTTONDOWN and game.state2 == 0 and game.state > 0:
 				change += 1
-				if randint(1, 10) < 8:
+				if randint(1, 10) < 7:
 					game.set_state2(1)
 				else:
 					game.set_state2(2)
