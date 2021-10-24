@@ -16,13 +16,14 @@ font0 = pygame.font.SysFont("Liberation mono", 50, True)
 font1 = pygame.font.SysFont("Liberation mono", 25, True)
 
 #music
-music = pygame.mixer.Sound("mus/redsun.mp3")
-square_sfx = pygame.mixer.Sound("mus/square.mp3")
+music = pygame.mixer.Sound("mus/redsun.wav")
+square_sfx = pygame.mixer.Sound("mus/square.wav")
 music.set_volume(0.2)
 
 #sounds
-up15_sfx = pygame.mixer.Sound("mus/15up.mp3")
-down15_sfx = pygame.mixer.Sound("mus/ROCK.mp3")
+up15_sfx = pygame.mixer.Sound("mus/15up.wav")
+down15_sfx = pygame.mixer.Sound("mus/ROCK.wav")
+lose_sfx = pygame.mixer.Sound("mus/lose.wav")
 
 #sound channels
 channel_0 = pygame.mixer.Channel(0)
@@ -189,6 +190,9 @@ class test():
 				screen.blit(s.text62, (600, 500))
 				s.time_clicked = pygame.time.get_ticks()
 			elif s.state == 7 and s.score < 4:
+				#if not s.sfx_lose:
+				#	channel_2.play(lose_sfx)
+				#	s.sfx_lose = True
 				screen.blit(s.bcg_lose, (0, 0))
 				screen.blit(s.img_wock, (50, 50))
 				screen.blit(s.text_lose, (220, 50))
