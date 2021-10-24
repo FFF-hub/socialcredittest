@@ -196,7 +196,7 @@ class test():
 				screen.blit(s.bcg_lose, (0, 0))
 				screen.blit(s.img_wock, (50, 50))
 				screen.blit(s.text_lose, (220, 50))
-			elif s.state == 7 and s.score > 4:
+			elif s.state == 7 and s.score >= 4:
 				screen.blit(s.bcg_win, (0, 0))
 				screen.blit(s.img_xina, (50, 50))
 				screen.blit(s.text_win, (220, 600))
